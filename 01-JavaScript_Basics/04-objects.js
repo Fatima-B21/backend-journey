@@ -27,7 +27,7 @@ person.city = "Faisalabad";
 console.log(person);
 
 let student = {
-    name: "Shaheer",
+    name: "Ali",
     marks: 85
 };
 if(student.marks >= 50){
