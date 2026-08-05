@@ -143,16 +143,16 @@
 
 // Object.keys()
 
-let laptop ={
-    brand: "Dell",
-    processor: "i5",
-    ram: "8GB",
-    storage: "512GB"
-};
+// let laptop ={
+//     brand: "Dell",
+//     processor: "i5",
+//     ram: "8GB",
+//     storage: "512GB"
+// };
 
-for(let [key,value] of Object.entries(laptop)){
-    console.log(`${key} ${value}`)
-}
+// for(let [key,value] of Object.entries(laptop)){
+//     console.log(`${key} ${value}`)
+// }
 
 // Merit
 
@@ -163,27 +163,40 @@ for(let [key,value] of Object.entries(laptop)){
 //     },
 //     {
 //         name: "Ali",
-//         marks: "45"
+//         marks: 45
 //     },
 //     {
 //         name: "Ahmed",
-//         marks: "30"
+//         marks: 82
 //     },
 //     {
 //         name: "Sara",
-//         marks: "82"
+//         marks: 30
 //     }
 // ];
-// function merit(){
-//     for(let i = 0; i < classroom.length; i++){
-//         const students = classroom[i];
-//         if(students.marks >= 75){
-//             console.log(`Passed Students: 
-//                 ${students.marks}`);
-//         }else{
 
+// function merit(){
+//     let student;
+//     let passedStudents = [];
+//     let failedStudents = [];
+//     for(let i = 0; i < classroom.length; i++){
+//         student = classroom[i];
+//         if(student.marks >= 75){
+//             passedStudents.push(student);    
+//         }else{ 
+//             failedStudents.push(student);
 //         }
-        
 //     };
+
+//     console.log("Passed Students:")
+//     for(let j = 0; j < passedStudents.length; j++){
+//         let passedStudent = passedStudents[j];
+//         console.log(passedStudent.name)
+//     }
+//     console.log("Failed Students:");
+//     for(let k = 0; k < failedStudents.length; k++){
+//         let failedStudent = failedStudents[k];
+//         console.log(failedStudent.name)
+//     }
 // };
 // merit();
