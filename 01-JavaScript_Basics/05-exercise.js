@@ -156,24 +156,24 @@
 
 // Merit
 
-// let classroom = [
-//     {
-//         name: "Fatima",
-//         marks: 90
-//     },
-//     {
-//         name: "Ali",
-//         marks: 45
-//     },
-//     {
-//         name: "Ahmed",
-//         marks: 82
-//     },
-//     {
-//         name: "Sara",
-//         marks: 30
-//     }
-// ];
+let classroom = [
+    {
+        name: "Fatima",
+        marks: 90
+    },
+    {
+        name: "Ali",
+        marks: 45
+    },
+    {
+        name: "Ahmed",
+        marks: 82
+    },
+    {
+        name: "Sara",
+        marks: 30
+    }
+];
 
 // function merit(){
 //     let student;
@@ -200,3 +200,93 @@
 //     }
 // };
 // merit();
+
+let users = [
+    { username: "Fatima", role: "Admin"},
+    { username: "Ali", role: "User"},
+    { username: "Sara", role: "User"}
+]
+
+const person = users.find(person => person.username === "Sara");
+console.log(`${person.username} is a ${person.role}`);
+
+const people = users.findIndex(people => (people.username === "Ali"));
+if(people !== -1){
+    console.log(`Ali is at index ${people}`);
+}else{
+    console.log("User not found")
+}
+
+const students = classroom.filter(students => students.marks >=75);
+console.log(students);
+
+let products = [
+    { name: "Keyboard", price: 3000 },
+    { name: "Mouse", price: 1500 },
+    { name: "Monitor", price: 25000 },
+    { name: "USB", price: 700 }
+];
+ const cheapProducts = products.filter(cheapProducts => cheapProducts.price < 2000);
+ console.log(cheapProducts);
+
+ let colleagues = [
+    { username: "Fatima"},
+    { username: "Ali"},
+    { username: "Sara"}
+ ];
+ const members = colleagues.map(members => members.username);
+ console.log(members);
+
+ let scholars = [
+    { name: "Fatima", marks: 90 },
+    { name: "Ali", marks: 45}
+ ];
+ 
+ const result = scholars.map(student =>{
+ return {
+    name: student.name,
+    status: student.marks >= 75 ? "Pass" : "Fail"
+ };
+ });
+ console.log(result)
+
+ const totalMarks = classroom.reduce((acc, student) => {
+ return (acc + student.marks)
+}, 0);
+const average = totalMarks / classroom.length;
+ console.log(`Total Marks = ${totalMarks}`);
+ console.log(`Average = ${average}`);
+
+ let customer = [
+    {
+        username: "Fatima",
+        password: "123",
+        role: "Admin",
+        isLoggedin: false
+    },
+    {
+        username: "Ali",
+        password: "456",
+        role: "User",
+        isLoggedin: false
+    },
+    {
+        username: "Sara",
+        password: "789",
+        role: "User",
+        isLoggedin: false
+    }
+];
+
+function loginSystem (username, password, role){
+    const validUser = customer.find(validUser => username === validUser.username && password === validUser.password && role === validUser.role
+    );
+    if(validUser){
+        console.log(`Welcome ${validUser.username} (${validUser.role})`)
+        validUser.isLoggedin = true;
+        console.log(customer);
+    }else{
+        console.log("Invalid Login")
+    }
+};
+loginSystem("Ali", "45", "User")
