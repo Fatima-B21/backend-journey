@@ -156,24 +156,24 @@
 
 // Merit
 
-let classroom = [
-    {
-        name: "Fatima",
-        marks: 90
-    },
-    {
-        name: "Ali",
-        marks: 45
-    },
-    {
-        name: "Ahmed",
-        marks: 82
-    },
-    {
-        name: "Sara",
-        marks: 30
-    }
-];
+// let classroom = [
+//     {
+//         name: "Fatima",
+//         marks: 90
+//     },
+//     {
+//         name: "Ali",
+//         marks: 45
+//     },
+//     {
+//         name: "Ahmed",
+//         marks: 82
+//     },
+//     {
+//         name: "Sara",
+//         marks: 30
+//     }
+// ];
 
 // function merit(){
 //     let student;
@@ -201,92 +201,183 @@ let classroom = [
 // };
 // merit();
 
-let users = [
-    { username: "Fatima", role: "Admin"},
-    { username: "Ali", role: "User"},
-    { username: "Sara", role: "User"}
-]
+// find(), findIndex(), filter(), map(), reduce()
 
-const person = users.find(person => person.username === "Sara");
-console.log(`${person.username} is a ${person.role}`);
+// let users = [
+//     { username: "Fatima", role: "Admin"},
+//     { username: "Ali", role: "User"},
+//     { username: "Sara", role: "User"}
+// ]
 
-const people = users.findIndex(people => (people.username === "Ali"));
-if(people !== -1){
-    console.log(`Ali is at index ${people}`);
-}else{
-    console.log("User not found")
-}
+// const person = users.find(person => person.username === "Sara");
+// console.log(`${person.username} is a ${person.role}`);
 
-const students = classroom.filter(students => students.marks >=75);
-console.log(students);
+// const people = users.findIndex(people => (people.username === "Ali"));
+// if(people !== -1){
+//     console.log(`Ali is at index ${people}`);
+// }else{
+//     console.log("User not found")
+// }
 
-let products = [
-    { name: "Keyboard", price: 3000 },
-    { name: "Mouse", price: 1500 },
-    { name: "Monitor", price: 25000 },
-    { name: "USB", price: 700 }
-];
- const cheapProducts = products.filter(cheapProducts => cheapProducts.price < 2000);
- console.log(cheapProducts);
+// const students = classroom.filter(students => students.marks >=75);
+// console.log(students);
 
- let colleagues = [
-    { username: "Fatima"},
-    { username: "Ali"},
-    { username: "Sara"}
- ];
- const members = colleagues.map(members => members.username);
- console.log(members);
+// let products = [
+//     { name: "Keyboard", price: 3000 },
+//     { name: "Mouse", price: 1500 },
+//     { name: "Monitor", price: 25000 },
+//     { name: "USB", price: 700 }
+// ];
+//  const cheapProducts = products.filter(cheapProducts => cheapProducts.price < 2000);
+//  console.log(cheapProducts);
 
- let scholars = [
-    { name: "Fatima", marks: 90 },
-    { name: "Ali", marks: 45}
- ];
+//  let colleagues = [
+//     { username: "Fatima"},
+//     { username: "Ali"},
+//     { username: "Sara"}
+//  ];
+//  const members = colleagues.map(members => members.username);
+//  console.log(members);
+
+//  let scholars = [
+//     { name: "Fatima", marks: 90 },
+//     { name: "Ali", marks: 45}
+//  ];
  
- const result = scholars.map(student =>{
- return {
-    name: student.name,
-    status: student.marks >= 75 ? "Pass" : "Fail"
- };
- });
- console.log(result)
+//  const result = scholars.map(student =>{
+//  return {
+//     name: student.name,
+//     status: student.marks >= 75 ? "Pass" : "Fail"
+//  };
+//  });
+//  console.log(result)
 
- const totalMarks = classroom.reduce((acc, student) => {
- return (acc + student.marks)
-}, 0);
-const average = totalMarks / classroom.length;
- console.log(`Total Marks = ${totalMarks}`);
- console.log(`Average = ${average}`);
+//  const totalMarks = classroom.reduce((acc, student) => {
+//  return (acc + student.marks)
+// }, 0);
+// const average = totalMarks / classroom.length;
+//  console.log(`Total Marks = ${totalMarks}`);
+//  console.log(`Average = ${average}`);
 
- let customer = [
-    {
-        username: "Fatima",
-        password: "123",
-        role: "Admin",
-        isLoggedin: false
-    },
-    {
-        username: "Ali",
-        password: "456",
-        role: "User",
-        isLoggedin: false
-    },
-    {
-        username: "Sara",
-        password: "789",
-        role: "User",
-        isLoggedin: false
-    }
-];
+//  let customer = [
+//     {
+//         username: "Fatima",
+//         password: "123",
+//         role: "Admin",
+//         isLoggedin: false
+//     },
+//     {
+//         username: "Ali",
+//         password: "456",
+//         role: "User",
+//         isLoggedin: false
+//     },
+//     {
+//         username: "Sara",
+//         password: "789",
+//         role: "User",
+//         isLoggedin: false
+//     }
+// ];
 
-function loginSystem (username, password, role){
-    const validUser = customer.find(validUser => username === validUser.username && password === validUser.password && role === validUser.role
-    );
-    if(validUser){
-        console.log(`Welcome ${validUser.username} (${validUser.role})`)
-        validUser.isLoggedin = true;
-        console.log(customer);
-    }else{
-        console.log("Invalid Login")
+// function loginSystem (username, password, role){
+//     const validUser = customer.find(validUser => username === validUser.username && password === validUser.password && role === validUser.role
+//     );
+//     if(validUser){
+//         console.log(`Welcome ${validUser.username} (${validUser.role})`)
+//         validUser.isLoggedin = true;
+//         console.log(customer);
+//     }else{
+//         console.log("Invalid Login")
+//     }
+// };
+// loginSystem("Ali", "45", "User");
+
+// Destructuring
+
+// const product = {
+//     name: "Keyboard",
+//     price: 3000,
+//     stock: 15
+// };
+// const {name, price, stock} = product;
+// console.log(`${name} costs ${price}`);
+
+// const fruits = ["Apple", "Banana", "Orange"];
+// const [first, second] = fruits;
+// console.log(`${first} ${second}`);
+
+// const student = {
+//     name: "Fatima",
+//     marks: 92,
+//     city: "Faisalabad"
+// };
+// const {name: studentName, marks:score} = student;
+// console.log(`${studentName} scored ${score}`);
+
+// const user = {
+//     username: "Fatima",
+//     role: "Admin",
+//     age:19
+// };
+// const {username: userName, role: userRole, age} = user;
+// console.log(`${userName} is ${age} years old and is an ${userRole}`);
+
+// const employee = {
+//     username: "Fatima",
+//     salary: 50000
+// };
+// const {username: employeeName, salary: income, department = "IT"} = employee;
+// console.log(`${employeeName} earns ${income} and works in ${department} department`);
+
+const student = {
+    name: "Ali",
+    marks: 85,
+    city: "Lahore"
+};
+
+function studentInfo({name, marks}){
+    console.log(`${name} got ${marks} marks`);
+};
+studentInfo(student);
+
+const product = {
+    title: "Laptop",
+    price: 80000,
+    category: "Electronics"
+};
+
+function productInfo({title: productName, price: cost}){
+    console.log(`${productName} costs ${cost}`);
+};
+
+productInfo(product);
+
+const user = {
+    username: "Fatima",
+    email: "fatima@gmail.com",
+    address: {
+        city: "Faisalabad",
+        country: "Pakistan"
     }
 };
-loginSystem("Ali", "45", "User")
+
+function userInfo({username, address:{city, country}}){
+    console.log(`${username} lives in ${city}, ${country}`);
+}
+
+userInfo(user);
+
+const order = {
+    id: 101,
+    customer: {
+        name: "Ali",
+        city: "Lahore"
+    }
+};
+
+function orderInfo({id: orderId, customer:{name: customerName, city}}){
+    console.log(`Order ${orderId} belongs to ${customerName} from ${city}`);
+};
+
+orderInfo(order);
