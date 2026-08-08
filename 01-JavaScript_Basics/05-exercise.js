@@ -330,54 +330,83 @@
 // const {username: employeeName, salary: income, department = "IT"} = employee;
 // console.log(`${employeeName} earns ${income} and works in ${department} department`);
 
-const student = {
-    name: "Ali",
-    marks: 85,
-    city: "Lahore"
-};
+// const student = {
+//     name: "Ali",
+//     marks: 85,
+//     city: "Lahore"
+// };
 
-function studentInfo({name, marks}){
-    console.log(`${name} got ${marks} marks`);
-};
-studentInfo(student);
+// function studentInfo({name, marks}){
+//     console.log(`${name} got ${marks} marks`);
+// };
+// studentInfo(student);
 
-const product = {
-    title: "Laptop",
-    price: 80000,
-    category: "Electronics"
-};
+// const product = {
+//     title: "Laptop",
+//     price: 80000,
+//     category: "Electronics"
+// };
 
-function productInfo({title: productName, price: cost}){
-    console.log(`${productName} costs ${cost}`);
-};
+// function productInfo({title: productName, price: cost}){
+//     console.log(`${productName} costs ${cost}`);
+// };
 
-productInfo(product);
+// productInfo(product);
 
-const user = {
-    username: "Fatima",
-    email: "fatima@gmail.com",
-    address: {
-        city: "Faisalabad",
-        country: "Pakistan"
-    }
-};
+// const user = {
+//     username: "Fatima",
+//     email: "fatima@gmail.com",
+//     address: {
+//         city: "Faisalabad",
+//         country: "Pakistan"
+//     }
+// };
 
-function userInfo({username, address:{city, country}}){
-    console.log(`${username} lives in ${city}, ${country}`);
-}
+// function userInfo({username, address:{city, country}}){
+//     console.log(`${username} lives in ${city}, ${country}`);
+// }
 
-userInfo(user);
+// userInfo(user);
 
-const order = {
-    id: 101,
-    customer: {
-        name: "Ali",
-        city: "Lahore"
-    }
-};
+// const order = {
+//     id: 101,
+//     customer: {
+//         name: "Ali",
+//         city: "Lahore"
+//     }
+// };
 
-function orderInfo({id: orderId, customer:{name: customerName, city}}){
-    console.log(`Order ${orderId} belongs to ${customerName} from ${city}`);
-};
+// function orderInfo({id: orderId, customer:{name: customerName, city}}){
+//     console.log(`Order ${orderId} belongs to ${customerName} from ${city}`);
+// };
 
-orderInfo(order);
+// orderInfo(order);
+
+// REST Operator
+
+// function calculateTotal(...prices){
+//     const total = prices.reduce((acc, currVal)=>{
+//         return(acc + currVal)
+//     }, 0)
+//     console.log(total)
+// };
+
+// calculateTotal(100, 200, 300);
+
+// const student = {
+//     name: "Fatima",
+//     marks: 92,
+//     city: "Faisalabad",
+//     semester: 6
+// };
+
+// const {name, ...otherDetails} = student;
+
+// const user = {
+//     name: "Fatima",
+//     role: "Admin",
+//     city: "Faisalabad",
+//     age: 19
+// };
+
+// const {role, ...publicProfile} = user;
